@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --primary-color: #3A3A3A; /*headings color*/
+    --secondary-color: #6C6C6C; /*text color*/
+    --btn-color: #E02C6D; /*button bg color*/
+}
+
+/* Throughover Website */
+.btn{
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background-color: var(--btn-color);
+}
+.btn a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    
+}
+
+/* Header */
+header{
+    max-width: 90%;
+    margin: 0 auto;
+}
+/* navication menu */
+nav{
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo{
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+nav ul{
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 50px;
+    align-items: center;
+}
+nav ul li{
+    list-style-type: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+.mobile-nav{
+    display: none;
+}
+
+/* Hero Section */
+.hero{
+    height: 65vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero-content{
+    max-width: 42%;
+}
+.hero-content h2{
+    color: var(--primary-color);
+    font-family: Poppins;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px; /* 134.615% */
+}
+.hero-content p{
+    color: var(--secondary-color);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 20px;
+}
+
+.banner{
+    max-width: 42%;
+}
+.banner .circle{
+    width: 515px;
+    height: 515px;
+    border: 1px solid rgb(230, 220, 220);
+    border-radius: 50%;
+    position: relative;
+}
+.circle .disc{
+    background-color: rgb(230, 220, 220);
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.circle .disc img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Main Section */
+main{
+    max-width: 80%;
+    margin: 0 auto;
+}
+/* Spornsors Section */
+.sponsors{
+    margin-top: 80px;
+    padding: 35px 0;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border: 2px solid rgb(230, 220, 220);
+    border-left: none;
+    border-right: none;
+}
+
+
+
+/* Responsive Mobile Design */
+@media screen and (max-width:576px) {
+    header{
+        max-width: 100%;
+    }
+    .hero-content{
+        max-width: 100%;
+    }
+    .banner{
+        max-width: 100%;
+    }
+    nav{
+        display: none;
+    }
+    .mobile-nav{
+        display: block;
+    }
+
+    /* Hero Section */
+    .hero{
+        height: 70vh;
+        flex-direction: column-reverse;
+        padding: 20px;
+        text-align: center;
+        font-size: 0.75rem;
+    }
+    .hero-content h2{
+        font-size: 2.5rem;
+    }
+    .banner .circle{
+        width: 300px;
+        height: 300px;
+    }
+    .circle .disc{
+        width: 200px;
+        height: 200px;
+    }
+    .circle .disc img{
+        width: 220px;
+    }
+
+    /* Spornsors Section */
+    .sponsors{
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+    .sponsors img{
+        width: 60px;
+    }
+}
