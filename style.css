@@ -126,7 +126,10 @@ main{
     margin-top: 80px;
     padding: 35px 0;
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    /* grid-template-columns: repeat(7, 1fr); */
+    grid-template-areas: 
+    "alibaba amazone daraz ebay rakuten target walmart"
+    ;
     border: 2px solid rgb(230, 220, 220);
     border-left: none;
     border-right: none;
@@ -154,7 +157,7 @@ main{
 
     /* Hero Section */
     .hero{
-        height: 70vh;
+        height: 120vh;
         flex-direction: column-reverse;
         padding: 20px;
         text-align: center;
@@ -177,10 +180,17 @@ main{
 
     /* Spornsors Section */
     .sponsors{
-        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-columns: repeat(3, 1fr); */
+        grid-template-areas: 
+        "alibaba amazone daraz"
+        "ebay rakuten target" 
+        ". walmart ."
+        ;
+        row-gap: 20px;
         
     }
     .sponsors img{
         width: 60px;
     }
+    
 }
