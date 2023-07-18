@@ -135,6 +135,77 @@ main{
     border-right: none;
 }
 
+/* Products Section */
+.products-section{
+    margin-top: 120px;
+    position: relative;
+}
+.products-section h2{
+    color: var(--primary-color);
+    font-size: 1.568rem;
+    font-weight: 600;
+    text-align: center;
+}
+.products-section .btn{
+    background-color: white;
+    position: absolute;
+    right: 0;
+}
+.products-section .btn a{
+    color: #E02C6D;
+}
+/* Products Container Under Products section */
+.product-container{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+}
+.product h3{
+    margin-top: 15px;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.product .price{
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.product p{
+    color: var(--secondary-color);
+    font-family: Inter;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.252px;
+    line-height: 1.2rem;
+}
+.product > .rating ul{
+    display: flex;
+    column-gap: 8px;
+}
+.product > .rating ul li{
+    list-style-type: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+.product > .rating ul li i{
+    font-size: 0.875rem;
+}
+
+
+
+
+
 
 
 /* Responsive Mobile Design */
@@ -177,6 +248,10 @@ main{
     .circle .disc img{
         width: 220px;
     }
+    /* Main */
+    main{
+        max-width: 90%;
+    }
 
     /* Spornsors Section */
     .sponsors{
@@ -193,4 +268,12 @@ main{
         width: 60px;
     }
     
+    /* Products Section */
+    /* Products Container Under Products section */
+    .product-container{
+        grid-template-columns: repeat(1, 1fr);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
